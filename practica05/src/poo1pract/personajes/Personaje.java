@@ -1,4 +1,4 @@
-
+package poo1pract.personajes;
 public class Personaje{
 
     private String nombre;

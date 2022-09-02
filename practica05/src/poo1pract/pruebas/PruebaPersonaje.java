@@ -1,3 +1,5 @@
+package poo1pract.pruebas;
+import poo1pract.pruebas;
 public class PruebaPersonaje {
     public static void main(String[] args){
         Personaje alumno = new Personaje("Kal El");

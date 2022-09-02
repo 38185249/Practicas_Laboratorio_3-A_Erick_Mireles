@@ -1,8 +1,7 @@
 public class Personaje{
 
     private String nombre;
-    private int edad = 0;
-    
+    private int edad;
     public Personaje(String nombre) {
         this.nombre = nombre;
         int edad = 0;
@@ -17,8 +16,8 @@ public class Personaje{
         System.out.println("Hola alumno de POO " + nombre);
     }
     public boolean setEdad(int edad){
-        this.edad = edad;
         if (edad > 0 && edad <= 120){
+            this.edad = edad;
             return true;
         }else{
             return false;

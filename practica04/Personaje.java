@@ -16,10 +16,11 @@ public class Personaje{
         System.out.println("Hola alumno de POO " + nombre);
     }
     public boolean setEdad(edad){
-        Personaje edad =;
-        if (edad > 0 && edad <= 120){
+        Personaje edad = laedad;
+        if (laedad > 0 && laedad <= 120){
             return true;
         }else{
+            
             return false;
         }
     }

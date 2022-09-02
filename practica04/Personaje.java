@@ -15,14 +15,15 @@ public class Personaje{
     public void saludar(){
         System.out.println("Hola alumno de POO " + nombre);
     }
-    public int getEdad(){
-        return edad;
-    }
     public boolean setEdad(int edad){
+        this.edad = edad;
         if (edad > 0 && edad <= 120){
-            this.edad = edad;
+            return true;
         }else{
             return false;
         }
+    }
+    public int getEdad(){
+        return edad;
     }
 }

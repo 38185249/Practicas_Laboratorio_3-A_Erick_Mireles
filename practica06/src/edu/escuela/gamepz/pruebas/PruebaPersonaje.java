@@ -12,6 +12,16 @@ public class PruebaPersonaje {
         per03.getDetalle();
         per04.getDetalle();
         per05.getDetalle();
+
+        Personaje per06 = per05;
+        Personaje per07 = per04;
+        Personaje per08 = per03;
+        Personaje per09 = per02;
+        Personaje per10 = per01;
+        per06.setNombre("Francisco Xavier Zepeda Flores");
+        per08.setNombre("Dayan");
+        per10.setNombre("Axel Fabian Eduardo David");
+
         /*
         Personaje alumno = new Personaje("Kal El", 15);
         alumno.saludar();
@@ -34,4 +44,5 @@ public class PruebaPersonaje {
             + " Edad: " + alumno.getEdad());
         */
     }
+    
 }

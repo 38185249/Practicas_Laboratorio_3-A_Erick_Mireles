@@ -33,6 +33,6 @@ public class Personaje{
         return edad;
     }
     public void getDetalle(){
-        System.out.println(nombre + "/t" + edad);
+        System.out.println(nombre + '\t' + edad);
     }
 }

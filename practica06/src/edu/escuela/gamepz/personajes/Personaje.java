@@ -32,4 +32,7 @@ public class Personaje{
     public int getEdad(){
         return edad;
     }
+    public void getDetalle(){
+        System.out.println(nombre + "/t" + edad);
+    }
 }

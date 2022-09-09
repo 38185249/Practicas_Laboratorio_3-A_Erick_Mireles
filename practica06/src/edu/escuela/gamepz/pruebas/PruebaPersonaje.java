@@ -19,8 +19,17 @@ public class PruebaPersonaje {
         Personaje per09 = per02;
         Personaje per10 = per01;
         per06.setNombre("Francisco Xavier Zepeda Flores");
+        per07.setEdad((int) Math.random()*100);
         per08.setNombre("Dayan");
+        per09.setEdad((int) Math.random()*100);
         per10.setNombre("Axel Fabian Eduardo David");
+        System.out.println("— — —");
+        per01.getDetalle();
+        per02.getDetalle();
+        per03.getDetalle();
+        per04.getDetalle();
+        per05.getDetalle();
+        
 
         /*
         Personaje alumno = new Personaje("Kal El", 15);

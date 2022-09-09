@@ -26,6 +26,7 @@ public class Personaje{
             this.edad = edad;
             return true;
         }else{
+            System.out.println("Edad invalida = " + edad);
             return false;
         }
     }

@@ -12,6 +12,7 @@ public class PruebaPersonaje {
         per03.getDetalle();
         per04.getDetalle();
         per05.getDetalle();
+        System.out.println("------");
 
         Personaje per06 = per05;
         Personaje per07 = per04;
@@ -19,39 +20,16 @@ public class PruebaPersonaje {
         Personaje per09 = per02;
         Personaje per10 = per01;
         per06.setNombre("Francisco Xavier Zepeda Flores");
-        per07.setEdad((int) Math.random()*100);
+        per07.setEdad((int) Math. random()*1000);
         per08.setNombre("Dayan");
-        per09.setEdad((int) Math.random()*100);
+        per09.setEdad((int) Math.random()*1000);
         per10.setNombre("Axel Fabian Eduardo David");
-        System.out.println("— — —");
+        System.out.println("------");
         per01.getDetalle();
         per02.getDetalle();
         per03.getDetalle();
         per04.getDetalle();
         per05.getDetalle();
-        
-
-        /*
-        Personaje alumno = new Personaje("Kal El", 15);
-        alumno.saludar();
-        System.out.println("Nombre: " + alumno.getNombre()
-            + " Edad: " + alumno.getEdad());
-        System.out.println("Modificando el nombre " 
-            + alumno.getNombre());
-        alumno.setNombre("Michael Jordan");
-        alumno.saludar();
-        if (!alumno.setEdad(30)){
-            System.out.println("Edad sin cambios");
-        }
-        System.out.println("Nombre: " + alumno.getNombre()
-            + " Edad: " + alumno.getEdad());
-        System.out.println("Modificando edad en 130");
-        if (!alumno.setEdad(130)){
-            System.out.println("Edad sin cambios");
-        }
-        System.out.println("Nombre: " + alumno.getNombre()
-            + " Edad: " + alumno.getEdad());
-        */
     }
     
 }

@@ -9,20 +9,19 @@ public class Personaje{
         this.edad = edad;
     }
     public void setNombre(String nombre){
-        if (nombre.length() > 5 && nombre.length() <= 25){
+        if (nombre.length() > 5 && nombre.length() < 25){
+            System.out.println("Nombre validado = " + nombre);
             this.nombre = nombre;
         }else{
-            System.out.println("Nombre invalido");
+            System.out.println("Nombre invalido = " + nombre);
         }
     }
     public String getNombre(){
         return nombre;
     }
-    public void saludar(){
-        System.out.println("Hola alumno de POO " + nombre);
-    }
     public boolean setEdad(int edad){
         if (edad > 0 && edad <= 120){
+            System.out.println("Edad validada = " + edad);
             this.edad = edad;
             return true;
         }else{

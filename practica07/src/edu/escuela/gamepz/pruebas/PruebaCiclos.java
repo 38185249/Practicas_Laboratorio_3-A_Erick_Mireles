@@ -12,19 +12,22 @@ public class PruebaCiclos {
     int n = 0;
     int m = 0;
 
-    while (n >= m){
-        n = (int) (Math.random()*100);
-        m = (int) (Math.random()*100);
-    }
-    public void setVariablen(){
+    public void setVariables(int n, int m){
+        while (n >= m){
+            n = (int) (Math.random()*100);
+            m = (int) (Math.random()*100);
+        }
         this.n = n;
-    public void getVariablen(){
+        this.m = m;
+    }
+    public int getVariablen(){
         return n;
-    
-    }public void getVariablem(){
+    }
+    public int getVariablem(){
         return m;
     }
-    public void getVariables(){
-        System.out.println(n + '\t' + m);
+
+    for (){
+
     }
 }

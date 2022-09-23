@@ -26,7 +26,11 @@ public class PruebaCiclos {
             int ed;
             ed = (int) (Math.random()*250);
             per01.setEdad(ed);
-            System.out.println("Diego " + ed + "se modifico la edad");
+            if (setEdad(ed) == true){
+                System.out.println("Diego " + ed + "se modifico la edad");
+            }else{
+                System.out.println("Diego " + ed + "sin modificacion en edad a " +ed);
+            }
             ed = (int) (Math.random()*250);
             per02.setEdad(ed);
             System.out.println("Almendra " + ed + "se modifico la edad");

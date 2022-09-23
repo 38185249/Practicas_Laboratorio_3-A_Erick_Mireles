@@ -2,6 +2,7 @@ package edu.escuela.gamepz.pruebas;
 import edu.escuela.gamepz.personajes.Personaje;
 public class PruebaPersonaje {
     public static void main(String[] args){
+        /*
         Personaje per01 = new Personaje("Almendra" , 200);
         Personaje per02 = new Personaje("Ricardo" , 10);
         Personaje per03 = new Personaje("Blanca" , 1);
@@ -30,6 +31,7 @@ public class PruebaPersonaje {
         per03.getDetalle();
         per04.getDetalle();
         per05.getDetalle();
+        */
     }
     
 }

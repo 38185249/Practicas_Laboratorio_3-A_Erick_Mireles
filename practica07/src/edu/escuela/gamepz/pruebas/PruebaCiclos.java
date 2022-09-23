@@ -23,11 +23,11 @@ public class PruebaCiclos {
         System.out.println("m = " +m);
 
         for (int i = n; i < m; i++){
-            int ed;
+            int ed = 0;
             ed = (int) (Math.random()*250);
             per01.setEdad(ed);
-            if (setEdad(ed) == true){
-                System.out.println("Diego " + ed + "se modifico la edad");
+            if (setEdad() == true){
+                per01.getDetalle();
             }else{
                 System.out.println("Diego " + ed + "sin modificacion en edad a " +ed);
             }

@@ -11,12 +11,13 @@ public class PruebaCiclos {
         Personaje per03 = new Personaje("Blanca");
         Personaje per04 = new Personaje("Jordan");
 
+        int n = 0;
+        int m = 0;
+
         while (n >= m){
             n = (int) (Math.random()*100);
             m = (int) (Math.random()*100);
         }
-        this.n = n;
-        this.m = m;
         System.out.println("n = " +n);
         System.out.println("m = " +m);
 
@@ -61,6 +62,6 @@ public class PruebaCiclos {
                 }
             }while (per04.setEdad(ed) == false);
             per04.getDetalle();
-        }continue outfor;
+        }
     }
 }

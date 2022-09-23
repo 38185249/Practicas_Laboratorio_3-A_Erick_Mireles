@@ -28,7 +28,14 @@ public class PruebaCiclos {
     }
 
     for (int i = n; i < m; i++){
-        int ed = (int) (Math.random()*250);
+        int ed;
+        ed = (int) (Math.random()*250);
         per01.setEdad(ed);
+        ed = (int) (Math.random()*250);
+        per02.setEdad(ed);
+        ed = (int) (Math.random()*250);
+        per03.setEdad(ed);
     }
+
+    
 }

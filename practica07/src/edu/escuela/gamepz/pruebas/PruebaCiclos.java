@@ -27,7 +27,7 @@ public class PruebaCiclos {
             //Persona 1
             ed = (int) (Math.random()*250);
             per01.setEdad(ed);
-            if (setEdad() == true){
+            if (per01.setEdad(ed) == true){
                 per01.getDetalle();
                 System.out.println("Se modifico la edad");
             }else{
@@ -37,7 +37,7 @@ public class PruebaCiclos {
             //Persona 2
             ed = (int) (Math.random()*250);
             per02.setEdad(ed);
-            if (setEdad() == true){
+            if (per02.setEdad(ed) == true){
                 per02.getDetalle();
                 System.out.println("Se modifico la edad");
             }else{
@@ -47,23 +47,21 @@ public class PruebaCiclos {
             //Persona 3
             ed = (int) (Math.random()*250);
             per03.setEdad(ed);
-            if (setEdad() == true){
+            if (per03.setEdad(ed) == true){
                 per03.getDetalle();
                 System.out.println("Se modifico la edad");
             }else{
                 per03.getDetalle();
                 System.out.println("Sin modificacion de edad a " + ed);
             }
-            
+
             do{
                 ed = (int) (Math.random()*200);
                 System.out.println(ed);
                 if (ed > 150){
                     System.out.println("***El numero generado es mayor a 150***");
                 }
-            }
-    
-            
+            }while ();
         }
     }
     public int getVariablen(){

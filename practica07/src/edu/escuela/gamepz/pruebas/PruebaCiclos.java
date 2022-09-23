@@ -19,6 +19,30 @@ public class PruebaCiclos {
         }
         this.n = n;
         this.m = m;
+        System.out.println("n = " +n);
+        System.out.println("m = " +m);
+
+        for (int i = n; i < m; i++){
+            int ed;
+            ed = (int) (Math.random()*250);
+            per01.setEdad(ed);
+            System.out.println("Diego " +ed);
+            ed = (int) (Math.random()*250);
+            per02.setEdad(ed);
+            System.out.println("Almendra " +ed);
+            ed = (int) (Math.random()*250);
+            per03.setEdad(ed);
+            System.out.println("Blanca " +ed);
+            do{
+                ed = (int) (Math.random()*200);
+                System.out.println(ed);
+                if (ed > 150){
+                    System.out.println("***El numero generado es mayor a 150***");
+                }
+            }
+    
+            
+        }
     }
     public int getVariablen(){
         return n;
@@ -26,16 +50,4 @@ public class PruebaCiclos {
     public int getVariablem(){
         return m;
     }
-
-    for (int i = n; i < m; i++){
-        int ed;
-        ed = (int) (Math.random()*250);
-        per01.setEdad(ed);
-        ed = (int) (Math.random()*250);
-        per02.setEdad(ed);
-        ed = (int) (Math.random()*250);
-        per03.setEdad(ed);
-    }
-
-    
 }

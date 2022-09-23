@@ -20,11 +20,9 @@ public class Personaje{
     }
     public boolean setEdad(int edad){
         if (edad > 0 && edad <= 120){
-            System.out.println("Edad validada = " + edad);
             this.edad = edad;
             return true;
         }else{
-            System.out.println("Edad invalida = " + edad);
             return false;
         }
     }

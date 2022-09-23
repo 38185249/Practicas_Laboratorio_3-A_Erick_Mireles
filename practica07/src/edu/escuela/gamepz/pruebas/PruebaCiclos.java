@@ -26,13 +26,13 @@ public class PruebaCiclos {
             int ed;
             ed = (int) (Math.random()*250);
             per01.setEdad(ed);
-            System.out.println("Diego " +ed);
+            System.out.println("Diego " + ed + "se modifico la edad");
             ed = (int) (Math.random()*250);
             per02.setEdad(ed);
-            System.out.println("Almendra " +ed);
+            System.out.println("Almendra " + ed + "se modifico la edad");
             ed = (int) (Math.random()*250);
             per03.setEdad(ed);
-            System.out.println("Blanca " +ed);
+            System.out.println("Blanca " + ed + "se modifico la edad");
             do{
                 ed = (int) (Math.random()*200);
                 System.out.println(ed);

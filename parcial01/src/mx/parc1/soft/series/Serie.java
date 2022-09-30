@@ -14,9 +14,6 @@ public class Serie {
                 this.n = n; 
             }
         }
-
-    }
-    public int getNumero(){
         return n;
     }
     public int primos(int n){
@@ -25,6 +22,7 @@ public class Serie {
                 System.out.println(i + " ");
             }
         }
+        return n;
     }
     
 }

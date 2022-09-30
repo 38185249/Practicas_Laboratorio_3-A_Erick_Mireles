@@ -1,4 +1,4 @@
-package src.mx.soft.parc1.parcial;
+package mx.soft.parc1.parcial;
 
 public class Serie {
     int num;

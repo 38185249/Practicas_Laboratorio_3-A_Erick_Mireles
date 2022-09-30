@@ -6,7 +6,7 @@ public class Serie {
     public Serie(int n){
         this.n = n;
     }
-    public void genNumero(int n){
+    public int genNumero(int n){
         while (n < 100){
             n = (int)(Math.random()*x*10);
 
@@ -21,7 +21,10 @@ public class Serie {
         }
 
     }
-    public String primos(int n){
+    public int getNumero(int n){
+        return n;
+    }
+    public String primos(){
         System.out.println(n);
     }
 }

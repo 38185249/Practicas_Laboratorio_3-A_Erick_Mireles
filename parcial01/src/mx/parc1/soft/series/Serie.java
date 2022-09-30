@@ -22,9 +22,10 @@ public class Serie {
     public String primos(int n){
         for (int i = 0; i == n; i++){
             if (i % 2 == 0){
-               return System.out.println(i + "caca");
+               System.out.println(n + " ");
             }
         }
+        return String.valueOf(n);
     }
     
 }

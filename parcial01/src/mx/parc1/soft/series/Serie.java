@@ -13,18 +13,18 @@ public class Serie {
             if (n % 2 == 0){
                 this.n = n; 
             }
-            for (int i = 0; i == n; i++){
-                if (i % 2 == 0){
-                    System.out.println(i + " ");
-                }
-            }
         }
 
     }
-    public int getNumero(int n){
+    public int getNumero(){
         return n;
     }
-    public String primos(){
-        System.out.println(n);
+    public int primos(int n){
+        for (int i = 0; i == n; i++){
+            if (i % 2 == 0){
+                System.out.println(i + " ");
+            }
+        }
     }
+    
 }

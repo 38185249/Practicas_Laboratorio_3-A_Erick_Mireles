@@ -9,9 +9,13 @@ public class Serie {
     public void genNumero(int n){
         while (n < 100){
             n = (int)(Math.random()*x*10);
+
+            if (n/2 == %0){
+
+            }
         }
+
         this.n = n;
-        
     }
     public String primos(int n){
         System.out.println(n + " ");

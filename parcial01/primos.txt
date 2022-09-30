@@ -1,0 +1,1 @@
+//numeros primos, regresa serie numeros primos hasta el punto primos(int), va a regresar un string de una sola linea donde tiene todos los numeros primos hasta el limite

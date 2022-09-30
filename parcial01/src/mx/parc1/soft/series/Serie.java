@@ -7,10 +7,11 @@ public class Serie {
         this.n = n;
     }
     public void genNumero(int n){
-        n = (int)(Math.random()*x*10);
         while (n < 100){
-            this.n = n;
+            n = (int)(Math.random()*x*10);
         }
+        this.n = n;
+        
     }
     public String primos(int n){
         System.out.println(n + " ");

@@ -2,17 +2,17 @@ package mx.parc1.soft.series;
 
 public class Serie {
     int x = 100;
-    int num;
-    public Serie(int num){
-        this.num = num;
+    int n;
+    public Serie(int n){
+        this.n = n;
     }
-    public void genNumero(int num){
-        num = (int)(Math.random()*x*10);
-        while (num < 100){
-            this.num = num;
+    public void genNumero(int n){
+        n = (int)(Math.random()*x*10);
+        while (n < 100){
+            this.n = n;
         }
     }
-    public String primos(int num){
-        System.out.println(num + " ");
+    public String primos(int n){
+        System.out.println(n + " ");
     }
 }

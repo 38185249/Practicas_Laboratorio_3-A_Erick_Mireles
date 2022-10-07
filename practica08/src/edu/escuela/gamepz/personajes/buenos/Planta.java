@@ -32,12 +32,13 @@ public class Planta extends Personaje{
     public void decVida(){
         super.decVida();
         if (getEscudo() == 'A'){
-
+            super.decVida();
         }
     }
     public void decVida(int a){
         super.decVida(a);
         if (getEscudo() == 'A'){
+            super.decVida(a*2);
         }
     }
     public void addVida(){

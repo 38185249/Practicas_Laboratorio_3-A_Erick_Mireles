@@ -26,13 +26,8 @@ public class Personaje{
     public boolean setVida(int vida){
         if (vida > 0 && vida <= 99){
             this.vida = vida;
-            if (vida < 0){
-                this.vida = 0;
-            }else if(vida > 99){
-                this.vida = 99;
-            }
             return true;
-        }else{
+        }else {
             return false;
         }
     }
@@ -43,15 +38,31 @@ public class Personaje{
         return nombre + " " + '\t' + vida;
     }
     public void decVida(){
-        this.vida = vida - 1;
+        if (vida > 0){
+            this.vida -= 1;
+        }else if (vida < 0){
+            this.vida = 0;
+        }
     }
     public void decVida(int a){
-        this.vida = vida - a;
+        if (vida > 0){
+            this.vida -= a;
+        }else if (vida < 0){
+            this.vida = 0;
+        }
     }
     public void addVida(){
-        this.vida = vida + 1;
+        if (vida < 99){
+            this.vida += 1;
+        }else if (vida > 99){
+            this.vida = 99;
+        }
     }
     public void addVida(int a){
-        this.vida = vida + a;
+        if (vida < 99){
+            this.vida += a;
+        }else if (vida > 99){
+            this.vida = 99;
+        }
     }
 }

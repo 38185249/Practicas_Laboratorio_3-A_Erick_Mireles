@@ -33,13 +33,25 @@ public class Planta extends Personaje{
         super.decVida();
         if (getEscudo() == 'A'){
             // this.vida = vida * 2;
+
         }
     }
     public void decVida(int a){
         super.decVida(a);
         if (getEscudo() == 'A'){
             // this.vida = vida * a;
-            super.decVida(a);
+        }
+    }
+    public void addVida(){
+        super.addVida();
+        if (getEscudo() == 'A'){
+            // this.vida = vida * a;
+        }
+    }
+    public void addVida(int a){
+        super.addVida(a);
+        if (getEscudo() == 'A'){
+            // this.vida = vida * a;
         }
     }
 }

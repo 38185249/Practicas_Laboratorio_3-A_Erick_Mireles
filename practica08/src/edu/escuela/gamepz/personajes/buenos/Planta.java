@@ -14,17 +14,17 @@ public class Planta extends Personaje{
     }
     public Planta(String nombre, char escudo){
         super(nombre);
-        int vida = 3;
+        super.setVida(3);
         this.escudo = escudo;
     }
     public Planta(String nombre, int vida){
         super(nombre, vida);
-        char escudo = 'A';
+        this.escudo = 'A';
     }
     public Planta(String nombre){
         super(nombre);
-        int vida = 3;
-        char escudo = 'A';
+        super.setVida(3);   
+        this.escudo = 'A';
     }
     public String getDetalle(){
         return super.getDetalle() + " " + escudo;
@@ -32,26 +32,22 @@ public class Planta extends Personaje{
     public void decVida(){
         super.decVida();
         if (getEscudo() == 'A'){
-            // this.vida = vida * 2;
 
         }
     }
     public void decVida(int a){
         super.decVida(a);
         if (getEscudo() == 'A'){
-            // this.vida = vida * a;
         }
     }
     public void addVida(){
         super.addVida();
         if (getEscudo() == 'A'){
-            // this.vida = vida * a;
         }
     }
     public void addVida(int a){
         super.addVida(a);
         if (getEscudo() == 'A'){
-            // this.vida = vida * a;
         }
     }
 }

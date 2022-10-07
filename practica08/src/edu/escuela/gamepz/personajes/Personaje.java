@@ -10,7 +10,7 @@ public class Personaje{
     }
     public Personaje(String nombre){
         this.nombre = nombre;
-        int vida = 3;
+        this.vida = 3;
     }
     public void setNombre(String nombre){
         if (nombre.length() > 5 && nombre.length() < 25){

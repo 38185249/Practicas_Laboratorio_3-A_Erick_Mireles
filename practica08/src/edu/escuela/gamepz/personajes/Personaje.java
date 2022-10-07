@@ -35,7 +35,7 @@ public class Personaje{
         return vida;
     }
     public String getDetalle(){
-        return nombre + '\t' + vida;
+        return nombre + " " + '\t' + vida;
     }
     public void decVida(){
         this.vida = vida - 1;

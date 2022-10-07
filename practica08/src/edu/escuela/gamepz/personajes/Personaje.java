@@ -38,22 +38,27 @@ public class Personaje{
         System.out.println(nombre + '\t' + vida);
     }
     public void decVida(){
-        if (vida > 0 && vida < 99){
-            this.vida = vida - 1;
-        }else if(vida < 0){
+        this.vida = vida - 1;
+        if (vida < 0){
             this.vida = 0;
-        }else if(vida > 99){
-            this.vida = 99;
-        }{
         }
     }
     public void decVida(int a){
         this.vida = vida - a;
+        if (vida < 0){
+            this.vida = 0;
+        }
     }
     public void addVida(){
         this.vida = vida + 1;
+        if(vida > 99){
+            this.vida = 99;
+        }
     }
     public void addVida(int a){
         this.vida = vida + a;
+        if(vida > 99){
+            this.vida = 99;
+        }
     }
 }

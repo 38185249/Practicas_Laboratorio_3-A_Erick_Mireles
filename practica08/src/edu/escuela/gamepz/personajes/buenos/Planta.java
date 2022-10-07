@@ -30,9 +30,9 @@ public class Planta extends Personaje{
         return super.getDetalle() + " " + escudo;
     }
     public void decVida(){
-        this.vida = vida - 1;
-        if (vida < 0){
-            this.vida = 0;
+        super.decVida();
+        if (escudo == 'A'){
+            
         }
     }
     public void decVida(int a){

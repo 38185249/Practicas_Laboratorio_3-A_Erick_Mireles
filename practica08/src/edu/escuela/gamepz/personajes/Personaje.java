@@ -31,16 +31,29 @@ public class Personaje{
             return false;
         }
     }
-    public int getEdad(){
+    public int getVida(){
         return vida;
     }
     public void getDetalle(){
         System.out.println(nombre + '\t' + vida);
     }
     public void decVida(){
-
+        if (vida > 0 && vida < 99){
+            this.vida = vida - 1;
+        }else if(vida < 0){
+            this.vida = 0;
+        }else if(vida > 99){
+            this.vida = 99;
+        }{
+        }
     }
     public void decVida(int a){
-
+        this.vida = vida - a;
+    }
+    public void addVida(){
+        this.vida = vida + 1;
+    }
+    public void addVida(int a){
+        this.vida = vida + a;
     }
 }

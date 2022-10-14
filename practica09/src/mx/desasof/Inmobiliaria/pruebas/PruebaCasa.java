@@ -22,16 +22,17 @@ public class PruebaCasa {
         while (i < casas.length){
             for (Casa c: casas){
                 if (c == casas[i]){
-                    System.out.println(c.toString() + " Son el mismo objeto " + casas[i].toString());
+                    System.out.println(c.toString() + " - Son el mismo objeto - " + casas[i].toString());
                     System.out.println(" - - - - - ");
-                }else if(c.equals(casas[i])){
-                    System.out.println(c.toString() + " Son objetos iguales " + casas[i].toString());
-                    System.out.println(" e e e e e ");
-                }else{
-                    System.out.println(c.toString() + " Son diferentes "+ casas[i].toString());
-                    System.out.println(" ! ! ! ! ! ");
-
+                    break;
                 }
+                if(c.equals(casas[i])){
+                    System.out.println(c.toString() + " - Son objetos iguales - " + casas[i].toString());
+                    System.out.println(" e e e e e ");
+                    break;
+                }  
+                System.out.println(c.toString() + " - Son diferentes - "+ casas[i].toString());
+                System.out.println(" ! ! ! ! ! ");
             }
             i++;
         }

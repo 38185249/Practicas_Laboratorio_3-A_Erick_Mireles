@@ -2,7 +2,7 @@ package mx.desasof.Inmobiliaria.casas;
 
 public class Campo extends Casa{
     
-    private float piscina[];
+    private float piscina[] = new float[2];
 
     public Campo(String tipo, int hab, float costo, float ancho, float largo) {
         super(tipo, hab, costo);

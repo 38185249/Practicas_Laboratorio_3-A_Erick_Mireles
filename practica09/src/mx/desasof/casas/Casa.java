@@ -13,7 +13,14 @@ public class Casa {
     }
     public Casa(String tipo){
         this.tipo = tipo;
-        hab = ;
-        costo = 200000
+        this.hab = 2;
+        this.costo = 200000;
+    }
+    public int hashCode(){
+        return (tipo.hashCode() * hab * costo);
+    }
+    public boolean equals(Casa objeto){
+        boolean result = false;
+        if (())
     }
 }

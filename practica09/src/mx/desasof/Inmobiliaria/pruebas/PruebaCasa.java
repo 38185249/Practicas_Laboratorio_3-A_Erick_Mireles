@@ -15,14 +15,19 @@ public class PruebaCasa {
                 new Casa("Estandar"),
                 new Campo("Cazador", 4, 15000, 3.5f, 5f),
                 new Urbana("Residencia", 5);
-    }
-    public static void main(String[] args) {
-        int i;
-        while (i < casas.length){
-            for (Casa c: casas){
 
-            }
-            i++;
+    int i= 0;
+    while (i < casas.length){
+        for (Casa c: casas){
+
         }
+        i++;
     }
 }
+// Preguntar si la posicion de i y c son iguales imprimir son el mismo objeto
+// (-----)
+// Se termina el ciclo for
+// Si no entra preguntar si son iguales imprimir son objetos iguales (objeto x = objeto y)
+// (e e e e e)
+// Si no imprimir son diferentes
+// (! ! ! ! !)

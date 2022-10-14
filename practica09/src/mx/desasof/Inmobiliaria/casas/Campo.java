@@ -10,7 +10,7 @@ public class Campo extends Casa{
         piscina[1] = largo;
     }
     public int hashCode(){
-        return ((super.hashCode()))/5;
+        return (int) (((super.hashCode()) * piscina[0] * piscina[1]) / 5);
     }
     public boolean equals(Campo objeto){
         boolean result = false;
@@ -18,5 +18,8 @@ public class Campo extends Casa{
             return result = true;
         }
         return result;
+    }
+    public String toString(){
+        return super.toString() + '\t' + piscina[0] + '\t' + piscina[1];
     }
 }

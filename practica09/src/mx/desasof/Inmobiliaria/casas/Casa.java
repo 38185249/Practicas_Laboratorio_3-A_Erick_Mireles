@@ -14,7 +14,7 @@ public class Casa {
     public Casa(String tipo){
         this.tipo = tipo;
         this.hab = 2;
-        this.costo = 200000;
+        this.costo = 2000000;
     }
     public String toString(){
         return tipo + '\t' + hab * '\t' + costo;

@@ -1,4 +1,4 @@
-package practica09.casas;
+package mx.desasof.Inmobiliaria.casas;
 
 public class Casa {
     
@@ -21,6 +21,9 @@ public class Casa {
     }
     public boolean equals(Casa objeto){
         boolean result = false;
-        if (())
+        if ((objeto != null) && (objeto instanceof Casa)){
+            
+        }
+        return result;
     }
 }

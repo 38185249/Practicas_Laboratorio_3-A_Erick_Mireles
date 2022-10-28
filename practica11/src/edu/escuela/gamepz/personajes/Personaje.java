@@ -38,35 +38,11 @@ public abstract class Personaje{
         return nombre + " " + '\t' + vida;
     }
     public abstract void decVida();
-    // {
-    //     if (vida > 0){
-    //         this.vida -= 1;
-    //     }else if (vida < 0){
-    //         this.vida = 0;
-    //     }
-    // }
+   
     public abstract void decVida(int a);
-    // {
-    //     if (vida > 0){
-    //         this.vida -= a;
-    //     }else if (vida < 0){
-    //         this.vida = 0;
-    //     }
-    // }
+   
     public abstract void addVida();
-    // {
-    //     if (vida < 99){
-    //         this.vida += 1;
-    //     }else if (vida > 99){
-    //         this.vida = 99;
-    //     }
-    // }
+   
     public abstract void addVida(int a);
-    // {
-    //     if (vida < 99){
-    //         this.vida += a;
-    //     }else if (vida > 99){
-    //         this.vida = 99;
-    //     }
-    // }
+   
 }

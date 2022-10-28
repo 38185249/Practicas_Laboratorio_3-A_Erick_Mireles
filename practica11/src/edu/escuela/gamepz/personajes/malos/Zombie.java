@@ -28,30 +28,33 @@ public class Zombie extends Personaje implements Muerto{
         return super.toString() + " " + ataque;
     }
     public void decVida(){
-        super.decVida();
-        if (getAtaque() == false){
-        }
+        // super.decVida();
+        // if (getAtaque() == false){
+        // }
     }
     public void decVida(int a){
-        super.decVida(a);
-        if (getAtaque() == false){
-            super.decVida(a*3);
-        }else if(getAtaque() == true){
-            super.decVida(a*2);
-        }
+        // super.decVida(a);
+        // if (getAtaque() == false){
+        //     super.decVida(a*3);
+        // }else if(getAtaque() == true){
+        //     super.decVida(a*2);
+        // }
     }
     public void addVida(){
-        super.addVida();
-        if (getAtaque() == true){
-        }
+        // super.addVida();
+        // if (getAtaque() == true){
+        // }
     }
     public void addVida(int a){
-        super.addVida(a);
-        if (getAtaque() == true){
-            super.addVida(a*3);
-        }else if (getAtaque() == false){
-            super.addVida(a);
-        }
+        // super.addVida(a);
+        // if (getAtaque() == true){
+        //     super.addVida(a*3);
+        // }else if (getAtaque() == false){
+        //     super.addVida(a);
+        // }
     }
-    
+    public void comer(){
+        
+    }
+
 }

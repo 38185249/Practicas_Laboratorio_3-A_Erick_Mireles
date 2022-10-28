@@ -20,10 +20,11 @@ public class PruebaHerencia {
         Zombie zom03 = new Zombie("Eduardo");
         
         Personaje [] personajes = {per01, per02, plan01, plan02, plan03, plan04, zom01, zom02, zom03};
+        
         for (Personaje a : personajes) {
-            num = num + 1;
             a.toString();
             int aleat = (int) (Math.random()*100);
+            System.out.println("");
             if (a instanceof Planta){
                 Planta tmp = (Planta) a;
                 System.out.println("Soy planta " + tmp.getEscudo());
@@ -31,11 +32,13 @@ public class PruebaHerencia {
             }
             if (a instanceof Zombie){
                 Zombie tmp = (Zombie) a;
-                System.out.println("Soy planta " + tmp.getAtaque());
+                System.out.println("Soy zombie " + tmp.getAtaque());
                 tmp.decVida(aleat);
+                tmp.comer();
             }
             System.out.print(aleat);
             a.toString();
+            num = num +1;
             System.out.print("***** Objeto " + num + " *****");
         }
     }

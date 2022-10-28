@@ -11,4 +11,7 @@ public enum Escudo {
     private Escudo(int nivel){
         this.nivel = nivel;
     }
+    public int getNivel(){
+        return nivel;
+    }
 }

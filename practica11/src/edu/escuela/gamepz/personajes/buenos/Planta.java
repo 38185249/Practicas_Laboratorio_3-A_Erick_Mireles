@@ -32,7 +32,7 @@ public class Planta extends Personaje{
     }
     public void decVida(){
         if (vida > 0){
-            this.vida - escudo;
+            this.vida -= escudo.getNivel();
         }
         // super.decVida();
         // if (getEscudo() == 'A'){
@@ -40,17 +40,26 @@ public class Planta extends Personaje{
         // }
     }
     public void decVida(int a){
+        if (vida > 0){
+            this.vida -= (escudo.getNivel()) * a;
+        }
         // super.decVida(a);
         // if (getEscudo() == 'A'){
         //     super.decVida(a*2);
         // }
     }
     public void addVida(){
+        if (vida < 99){
+            this.vida += (escudo.getNivel());
+        }
         // super.addVida();
         // if (getEscudo() == 'A'){
         // }
     }
     public void addVida(int a){
+        if (vida < 99){
+            this.vida += (escudo.getNivel()) * a;
+        }
         // super.addVida(a);
         // if (getEscudo() == 'A'){
         //     super.addVida(a*2);

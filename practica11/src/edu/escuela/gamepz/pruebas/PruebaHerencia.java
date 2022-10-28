@@ -22,7 +22,7 @@ public class PruebaHerencia {
         Personaje [] personajes = {per01, per02, plan01, plan02, plan03, plan04, zom01, zom02, zom03};
         
         for (Personaje a : personajes) {
-            a.toString();
+            System.out.println(a.toString());
             int aleat = (int) (Math.random()*100);
             if (a instanceof Planta){
                 Planta tmp = (Planta) a;
@@ -36,7 +36,7 @@ public class PruebaHerencia {
                 tmp.comer();
             }
             System.out.print(aleat + " " + '\n');
-            a.toString();
+            System.out.println(a.toString());
             num = num +1;
             System.out.print("***** Objeto " + num + " *****" + '\n');
         }

@@ -25,7 +25,7 @@ public class Zombie extends Personaje implements Muerto{
         this.ataque = false;
     }
     public String toString(){
-        return super.toString() + '\t' + ataque;
+        return super.toString() + '\t' + this.ataque;
     }
     public void decVida(){
         if (vida > 0 && getAtaque() == false){

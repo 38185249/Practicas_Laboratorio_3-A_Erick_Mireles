@@ -35,7 +35,7 @@ public abstract class Personaje{
         return vida;
     }
     public String toString(){
-        return nombre + '\t' + vida;
+        return this.nombre + '\t' + this.vida;
     }
     public abstract void decVida();
    

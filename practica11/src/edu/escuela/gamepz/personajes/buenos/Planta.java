@@ -28,7 +28,7 @@ public class Planta extends Personaje{
         this.escudo = Escudo.NULO;
     }
     public String toString(){
-        return super.toString() + '\t' + escudo;
+        return super.toString() + '\t' + this.escudo;
     }
     public void decVida(){
         if (vida > 0){

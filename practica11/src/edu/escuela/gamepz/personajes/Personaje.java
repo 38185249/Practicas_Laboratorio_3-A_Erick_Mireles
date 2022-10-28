@@ -1,8 +1,8 @@
 package edu.escuela.gamepz.personajes;
-public class Personaje{
+public abstract class Personaje{
 
     private String nombre;
-    private int vida = 0;
+    protected int vida = 0;
     
     public Personaje(String nombre, int vida) {
         this.nombre = nombre;
@@ -34,35 +34,39 @@ public class Personaje{
     public int getVida(){
         return vida;
     }
-    public String getDetalle(){
+    public String toString(){
         return nombre + " " + '\t' + vida;
     }
-    public void decVida(){
-        if (vida > 0){
-            this.vida -= 1;
-        }else if (vida < 0){
-            this.vida = 0;
-        }
-    }
-    public void decVida(int a){
-        if (vida > 0){
-            this.vida -= a;
-        }else if (vida < 0){
-            this.vida = 0;
-        }
-    }
-    public void addVida(){
-        if (vida < 99){
-            this.vida += 1;
-        }else if (vida > 99){
-            this.vida = 99;
-        }
-    }
-    public void addVida(int a){
-        if (vida < 99){
-            this.vida += a;
-        }else if (vida > 99){
-            this.vida = 99;
-        }
-    }
+    public abstract void decVida();
+    // {
+    //     if (vida > 0){
+    //         this.vida -= 1;
+    //     }else if (vida < 0){
+    //         this.vida = 0;
+    //     }
+    // }
+    public abstract void decVida(int a);
+    // {
+    //     if (vida > 0){
+    //         this.vida -= a;
+    //     }else if (vida < 0){
+    //         this.vida = 0;
+    //     }
+    // }
+    public abstract void addVida();
+    // {
+    //     if (vida < 99){
+    //         this.vida += 1;
+    //     }else if (vida > 99){
+    //         this.vida = 99;
+    //     }
+    // }
+    public abstract void addVida(int a);
+    // {
+    //     if (vida < 99){
+    //         this.vida += a;
+    //     }else if (vida > 99){
+    //         this.vida = 99;
+    //     }
+    // }
 }

@@ -26,8 +26,8 @@ public class Planta extends Personaje{
         super.setVida(3);   
         this.escudo = 'A';
     }
-    public String getDetalle(){
-        return super.getDetalle() + " " + escudo;
+    public String toString(){
+        return super.toString() + " " + escudo;
     }
     public void decVida(){
         super.decVida();

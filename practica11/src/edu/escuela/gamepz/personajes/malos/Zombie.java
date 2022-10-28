@@ -23,8 +23,8 @@ public class Zombie extends Personaje{
         super.setVida(3);
         this.ataque = false;
     }
-    public String getDetalle(){
-        return super.getDetalle() + " " + ataque;
+    public String toString(){
+        return super.toString() + " " + ataque;
     }
     public void decVida(){
         super.decVida();

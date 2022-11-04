@@ -7,7 +7,7 @@ public class PersException extends Exception{
         this.msg = msg;
         this.pos = pos;
     }
-    public int getPos(int pos){
+    public int getPos(){
         return pos;
     }
 }

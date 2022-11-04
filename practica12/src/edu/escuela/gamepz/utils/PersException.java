@@ -1,11 +1,11 @@
 package edu.escuela.gamepz.utils;
 public class PersException extends Exception{
 
-    private final String msg;
-    private final int pos;
+    private String msg;
+    private int pos;
 
     public PersException(String msg, int pos){
-        this.msg = msg;
+        super(msg);
         this.pos = pos;
     }
     public int getPos(){

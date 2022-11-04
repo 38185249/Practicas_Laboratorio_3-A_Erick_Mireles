@@ -8,7 +8,7 @@ public class Tablero {
     private Tablero(){
 
     }
-    public void mostrar(){
+    public static void mostrar(){
         System.out.println("\nInicio * * * Contenido del arreglo en Tablero");
         for (Personaje tmp: personajes){
             int lapos = +1;
@@ -20,14 +20,14 @@ public class Tablero {
         }
         System.out.println("Fin * * * Contenido del arreglo en Tablero\n");
     }
-    public void insertar(Personaje p, int pos) throws PersException{
+    public static void insertar(Personaje p, int pos) throws PersException{
         if (pos < 0 && pos > MAX_SIZE){
             throw new PersException("Indice fuera de rango ", pos);
         }else{
             personajes[pos] = p;
         }
     }
-    public void borrar(int pos) throws PersException{
+    public static void borrar(int pos) throws PersException{
         if (pos < 0 && pos > MAX_SIZE){
             throw new PersException("Indice fuera de rango ", pos);
         }else if(personajes[pos] == null){

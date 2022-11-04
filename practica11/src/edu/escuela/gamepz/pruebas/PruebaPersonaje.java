@@ -1,5 +1,5 @@
 package edu.escuela.gamepz.pruebas;
-import edu.escuela.gamepz.personajes.Personaje;
+// import edu.escuela.gamepz.personajes.Personaje;
 public class PruebaPersonaje {
     public static void main(String[] args){
         /*

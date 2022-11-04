@@ -6,9 +6,6 @@ import edu.escuela.gamepz.utils.Escudo;
 public class Planta extends Personaje{
     private Escudo escudo;
 
-    public Escudo getEscudo(){
-        return escudo;
-    }
     public Planta(String nombre, int vida, Escudo escudo){
         super(nombre, vida);
         this.escudo = escudo;
@@ -30,24 +27,39 @@ public class Planta extends Personaje{
     public String toString(){
         return super.toString() + '\t' + escudo.getNivel();
     }
+    public Escudo getEscudo(){
+        return escudo;
+    }
     public void decVida(){
         if (vida > 0){
-            this.vida -= (1 - escudo.getNivel());
-        }
+            this.vida -= (1 + escudo.getNivel());
+            if (vida < 0){
+                this.vida = 1;
+            }
+        } 
     }
     public void decVida(int a){
         if (vida > 0){
-            this.vida -= (1 - (escudo.getNivel()) * a);
+            this.vida -= (1 + (escudo.getNivel()) * a);
+            if (vida < 0){
+                this.vida = 1;
+            }
         }
     }
     public void addVida(){
         if (vida < 99){
             this.vida += (1 + escudo.getNivel());
+            if (vida > 99){
+                this.vida = 99;
+            }
         }
     }
     public void addVida(int a){
         if (vida < 99){
             this.vida += (1 + (escudo.getNivel()) * a);
+            if (vida > 99){
+                this.vida = 99;
+            }
         }
     }
 }

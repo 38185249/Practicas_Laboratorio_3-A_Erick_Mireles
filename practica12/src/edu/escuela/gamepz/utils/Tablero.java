@@ -33,7 +33,7 @@ public class Tablero {
         }else if(personajes[pos] == null){
             throw new PersException("Si personaje para borrar ", pos);
         }else{
-            
+            personajes[pos] = null;
         }
     }
 }

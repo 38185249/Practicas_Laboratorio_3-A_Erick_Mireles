@@ -69,8 +69,11 @@ public abstract class Personaje implements Comparable<Personaje>{
         this.size = size;
     }
     public int compareTo(Personaje o) {
-        if(this.nombre.compareTo(o.nombre) = 0){
-            return this.nombre.compareTo(o.nombre);
+        if(this.nombre == o.nombre){
+            return this.vida.compareTo(o.vida);
+        }
+        if(this.nombre == o.nombre && this.vida ==o.vida){
+            return this.size.compareTo(o.size);
         }
     }
     // public int compareTo(Personaje o) {

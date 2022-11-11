@@ -19,8 +19,8 @@ public class PruebaColeccion {
             new Zombie("Dayan",Tablero.genVida(),true),
             new Zombie("Armando",Tablero.genVida())
         };
-        TreeSet arbol = new TreeSet();
-        LinkedList lista = new LinkedList<Personaje>();
+        TreeSet<Personaje> arbol = new TreeSet<>();
+        LinkedList<Personaje> lista = new LinkedList<Personaje>();
 
         for (Personaje tmp : datos) {
             arbol.add(tmp);

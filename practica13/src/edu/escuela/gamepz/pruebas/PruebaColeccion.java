@@ -20,7 +20,7 @@ public class PruebaColeccion {
             new Zombie("Armando",Tablero.genVida())
         };
         TreeSet<Personaje> arbol = new TreeSet<>();
-        LinkedList<Personaje> lista = new LinkedList<Personaje>();
+        LinkedList<Personaje> lista = new LinkedList<>();
 
         for (Personaje tmp : datos) {
             arbol.add(tmp);
@@ -38,7 +38,7 @@ public class PruebaColeccion {
             System.out.println(p);
         }
         
-        ArrayList arr = new ArrayList();
+        ArrayList<Personaje> arr = new ArrayList<>();
         arr.addAll(lista);
         
         System.out.println(" - - - Orden Tamanio - - - ");

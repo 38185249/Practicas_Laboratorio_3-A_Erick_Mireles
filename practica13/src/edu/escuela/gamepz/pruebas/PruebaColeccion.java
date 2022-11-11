@@ -1,7 +1,10 @@
 package edu.escuela.gamepz.pruebas;
 
-import java.util.LinkedList;
-import java.util.TreeSet;
+import java.util.*;
+// import java.util.ArrayList;
+// import java.util.Collections;
+// import java.util.LinkedList;
+// import java.util.TreeSet;
 import edu.escuela.gamepz.personajes.Personaje;
 import edu.escuela.gamepz.personajes.buenos.Planta;
 import edu.escuela.gamepz.personajes.malos.Zombie;
@@ -27,6 +30,25 @@ public class PruebaColeccion {
             arbol.add(tmp);
             lista.add(tmp);
         }
+
+        System.out.println(" - - - Orden Natural - - - ");
+        for (Personaje p : arbol){
+            System.out.println(p);
+        }
+
+        System.out.println(" - - - Orden Vida - - - ");
+        Collections.sort(lista,new ByVida());
+        for (Personaje p : lista){
+            System.out.println(p);
+        }
         
+        ArrayList arr = new ArrayList();
+        arr.addAll(lista);
+        
+        System.out.println(" - - - Orden Tamanio - - - ");
+        Collections.sort(arr, new BySize());
+        for (Personaje p : arr){
+            System.out.println(p);
+        }
     }
 }

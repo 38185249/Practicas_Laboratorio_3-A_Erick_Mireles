@@ -62,7 +62,14 @@ public abstract class Personaje implements Comparable{
         size = Float.valueOf(df.format(size));
         return size;
     }
-    public int compareTo(Object o) {
+    /**
+     * @param o
+     * @return
+     */
+    public int compareTo(Personaje o) {
+        if(o.getNombre() == o.nombre){
+            return this.getVida().compareTo(o.getVida());
+        }
         return 0;
     }
 }

@@ -16,7 +16,7 @@ public class Planta extends Personaje{
         this.escudo = escudo;
     }
     public Planta(String nombre, int vida){
-        super(nombre, vida);
+        super(nombre, vida, 0.0f);
         this.escudo = Escudo.NULO;
     }
     public Planta(String nombre){

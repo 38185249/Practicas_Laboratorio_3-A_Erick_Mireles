@@ -2,7 +2,7 @@ package edu.escuela.gamepz.personajes;
 
 import java.text.DecimalFormat;
 
-public abstract class Personaje implements Comparable{
+public abstract class Personaje implements Comparable<Personaje>{
 
     private String nombre;
     protected int vida = 0;
@@ -68,8 +68,10 @@ public abstract class Personaje implements Comparable{
     public void setSize(float size) {
         this.size = size;
     }
-    public int compareTo(Object o) {
-        return 0;
+    public int compareTo(Personaje o) {
+        if(this.nombre.compareTo(o.nombre) = 0){
+            return this.nombre.compareTo(o.nombre);
+        }
     }
     // public int compareTo(Personaje o) {
     //     if(o.getNombre() == o.nombre){

@@ -46,7 +46,7 @@ public abstract class Personaje implements Comparable<Personaje>{
         return vida;
     }
     public String toString(){
-        return nombre + '\t' + vida;
+        return nombre + '\t' + vida + '\t' + size;
     }
     public abstract void decVida();
    
@@ -57,7 +57,7 @@ public abstract class Personaje implements Comparable<Personaje>{
     public abstract void addVida(int a);
 
     public float genSize(){
-        float size = (float) (Math.random()*10);
+        float size = (float) (Math.random()*10+1);
         DecimalFormat df = new DecimalFormat("#.00");
         size = Float.valueOf(df.format(size));
         return size;
@@ -73,12 +73,11 @@ public abstract class Personaje implements Comparable<Personaje>{
 			return this.nombre.compareTo(o.nombre);
 		}
 		if(this.vida != o.vida){
-			return this.vida - o.vida;
+			return o.vida - this.vida;
 		}
 		if(this.size == o.size){
 			return 0;
 		}
 		return (o.size < this.size)? -1 : 1;
     }
-   
 }

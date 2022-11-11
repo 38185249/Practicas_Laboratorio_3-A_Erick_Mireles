@@ -1,10 +1,6 @@
 package edu.escuela.gamepz.pruebas;
 
 import java.util.*;
-// import java.util.ArrayList;
-// import java.util.Collections;
-// import java.util.LinkedList;
-// import java.util.TreeSet;
 import edu.escuela.gamepz.personajes.Personaje;
 import edu.escuela.gamepz.personajes.buenos.Planta;
 import edu.escuela.gamepz.personajes.malos.Zombie;

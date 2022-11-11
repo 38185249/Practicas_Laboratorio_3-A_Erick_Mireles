@@ -2,7 +2,7 @@ package edu.escuela.gamepz.personajes;
 
 import java.text.DecimalFormat;
 
-public abstract class Personaje{
+public abstract class Personaje implements Comparable{
 
     private String nombre;
     protected int vida = 0;
@@ -61,5 +61,8 @@ public abstract class Personaje{
         DecimalFormat df = new DecimalFormat("#.00");
         size = Float.valueOf(df.format(size));
         return size;
+    }
+    public int compareTo(Object o) {
+        return 0;
     }
 }

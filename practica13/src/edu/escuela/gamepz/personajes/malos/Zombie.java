@@ -7,7 +7,7 @@ public class Zombie extends Personaje implements Muerto{
     private boolean ataque;
 
     public Zombie(String nombre, int vida, boolean ataque){
-        super(nombre, vida);
+        super(nombre, vida, 0.0f);
         this.ataque = ataque;
     }
     public Zombie(String nombre, boolean ataque){
@@ -19,6 +19,9 @@ public class Zombie extends Personaje implements Muerto{
         super(nombre);
         super.setVida(3);
         this.ataque = false;
+    }
+    public Zombie(String nombre, float size){
+        super(nombre,3,size);
     }
     public boolean getAtaque(){
         return ataque;

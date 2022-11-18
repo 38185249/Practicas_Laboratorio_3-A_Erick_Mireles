@@ -23,15 +23,15 @@ public class PruebaColeccion {
             arbol = (TreeSet<Personaje>) ois.readObject();
             ois.close();
         } catch (Exception e) {
-            System.out.println("vales madres error: " + e);     
+            System.out.println("Error al guardar objetos: " + e);     
         }
     }
         
     public static void main(String[] args) {
-        String path = System.getProperty("user.home");
+        String path = "d:/MIS DOCUMENTOS/IngSoft3B/POO/Practicas_Laboratorio_3-A_Erick_Mireles/practica14/src/";
         Scanner s = new Scanner(System.in);
         String fname = s.nextLine();
-        File f = new File(path + fname);
+        File f = new File(path, fname);
         
         Personaje[] datos = {
             new Planta("Fabian",Tablero.genVida(),Escudo.MEDIO),
@@ -75,21 +75,21 @@ public class PruebaColeccion {
         if(f.exists()){
             System.out.println("El archivo existe");
             return;
-        }else{
-            f.mkdir();
         }
         if(f.isDirectory()){
             mostrarDirectorio(f);
             return;
         }
         guardarObjetos(f, arbol);
-        try {
-            FileOutputStream fos = new FileOutputStream ("datArbol.ser");
-            ObjectOutputStream oos = new ObjectOutputStream (fos);
-            oos.writeObject(arbol);
-            oos.close ();
-        } catch (Exception e) {
-            System.out.println("Estas bien wey error: " + e);
+        for (Personaje tmp : arbol) {
+            try {
+                FileOutputStream fos = new FileOutputStream ("datArbol.ser");
+                ObjectOutputStream oos = new ObjectOutputStream (fos);
+                oos.writeObject(tmp);
+                oos.close ();
+            } catch (Exception e) {
+                System.out.println("Error al guardar elementos en el archivo datArbol.ser: " + e);
+            }
         }
     }
 }

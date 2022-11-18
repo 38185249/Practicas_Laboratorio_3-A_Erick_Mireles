@@ -2,7 +2,9 @@ package edu.escuela.gamepz.pruebas;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.*;
 import edu.escuela.gamepz.personajes.Personaje;
 import edu.escuela.gamepz.personajes.buenos.Planta;
@@ -21,7 +23,7 @@ public class PruebaColeccion {
             arbol = (TreeSet<Personaje>) ois.readObject();
             ois.close();
         } catch (Exception e) {
-            System.out.println("vales madres error: " + e);
+            System.out.println("vales madres error: " + e);     
         }
     }
         
@@ -73,11 +75,21 @@ public class PruebaColeccion {
         if(f.exists()){
             System.out.println("El archivo existe");
             return;
+        }else{
+            f.mkdir();
         }
         if(f.isDirectory()){
             mostrarDirectorio(f);
             return;
         }
         guardarObjetos(f, arbol);
+        try {
+            FileOutputStream fos = new FileOutputStream ("datArbol.ser");
+            ObjectOutputStream oos = new ObjectOutputStream (fos);
+            oos.writeObject(arbol);
+            oos.close ();
+        } catch (Exception e) {
+            System.out.println("Estas bien wey error: " + e);
+        }
     }
 }

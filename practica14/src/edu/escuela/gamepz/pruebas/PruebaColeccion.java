@@ -1,9 +1,7 @@
 package edu.escuela.gamepz.pruebas;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.*;
 import edu.escuela.gamepz.personajes.Personaje;
@@ -12,28 +10,24 @@ import edu.escuela.gamepz.personajes.malos.Zombie;
 import edu.escuela.gamepz.utils.*;
 
 public class PruebaColeccion {
-    
-    private static void mostrarDirectorio(File f) {
-        System.out.println(f.getAbsolutePath());
-    }
-    private static void guardarObjetos(File f, TreeSet<Personaje> arbol){
-        for (Personaje tmp : arbol) {
-            try {
-                FileInputStream fis = new FileInputStream("fis.ser");
-                ObjectInputStream ois = new ObjectInputStream(fis);
-                tmp = (Personaje) ois.readObject();
-                ois.close();
-            } catch (Exception e) {
-                System.out.println("Error al guardar objetos: " + e);     
+    public static void main(String[] args) {
+        String path = System.getProperty("user.home");
+        path += System.getProperty("file.separator");
+        Scanner s = new Scanner(System.in);
+        path += s.nextLine();
+        System.out.println(path);
+        File f = new File(path);
+        s.close();
+
+        if(f.exists()){
+            if(f.isFile()){
+                System.out.println("El archivo existe");
+                return;
+            }else{
+                mostrarDirectorio(f);
+                System.exit(0);
             }
         }
-    }
-        
-    public static void main(String[] args) {
-        String path = "d:/MIS DOCUMENTOS/IngSoft3B/POO/Practicas_Laboratorio_3-A_Erick_Mireles/practica14/src/";
-        Scanner s = new Scanner(System.in);
-        String fname = s.nextLine();
-        File f = new File(path, fname);
         
         Personaje[] datos = {
             new Planta("Fabian",Tablero.genVida(),Escudo.MEDIO),
@@ -73,25 +67,26 @@ public class PruebaColeccion {
         for (Personaje p : arr){
             System.out.println(p);
         }
-        // Codigo de la Practica 14
-        if(f.exists()){
-            System.out.println("El archivo existe");
-            return;
-        }
-        if(f.isDirectory()){
-            mostrarDirectorio(f);
-            return;
-        }
+
         guardarObjetos(f, arbol);
-        for (Personaje tmp : arbol) {
-            try {
-                FileOutputStream fos = new FileOutputStream ("datArbol.ser");
-                ObjectOutputStream oos = new ObjectOutputStream (fos);
-                oos.writeObject(tmp);
-                oos.close ();
-            } catch (Exception e) {
-                System.out.println("Error al guardar elementos en el archivo datArbol.ser: " + e);
+    }
+    private static void mostrarDirectorio(File f) {
+        String[] lista = f.list();
+        for (String l : lista) {
+            System.out.println(l);
+        }
+        
+    }
+    private static void guardarObjetos(File file, TreeSet<Personaje> t){
+        try {
+            FileOutputStream f = new FileOutputStream(file);
+            ObjectOutputStream s = new ObjectOutputStream(f);
+            for (Personaje p : t) {
+                s.writeObject(p);
             }
+            s.close();
+        } catch (Exception e) {
+            System.out.println("Error al guardar objetos: " + e);     
         }
     }
 }

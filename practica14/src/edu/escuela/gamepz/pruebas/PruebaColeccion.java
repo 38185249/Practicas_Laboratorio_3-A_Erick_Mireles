@@ -9,19 +9,19 @@ import edu.escuela.gamepz.personajes.malos.Zombie;
 import edu.escuela.gamepz.utils.*;
 
 public class PruebaColeccion {
+    
+    private static void mostrarDirectorio(File f) {
+        System.out.println(f.getAbsolutePath());
+    }
+    private static void guardarObjetos(File f, TreeSet<Personaje> arbol) {
+        
+    }
     public static void main(String[] args) {
         String path = System.getProperty("user.home");
         Scanner s = new Scanner(System.in);
         String fname = s.nextLine();
         File f = new File(path + fname);
         
-        if(f.exists()){
-            System.out.println("El archivo existe");
-        }
-        if(f.isDirectory()){
-            f.mostrarDirectorio(f);
-        }
-
         Personaje[] datos = {
             new Planta("Fabian",Tablero.genVida(),Escudo.MEDIO),
             new Planta("Bianca",Tablero.genVida()),
@@ -60,5 +60,14 @@ public class PruebaColeccion {
         for (Personaje p : arr){
             System.out.println(p);
         }
+        if(f.exists()){
+            System.out.println("El archivo existe");
+        }
+        if(f.isDirectory()){
+            mostrarDirectorio(f);
+            guardarObjetos(f, arbol);
+        }
+        
     }
+
 }

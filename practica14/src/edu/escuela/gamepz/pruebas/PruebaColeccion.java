@@ -1,6 +1,8 @@
 package edu.escuela.gamepz.pruebas;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
 import java.util.*;
 import edu.escuela.gamepz.personajes.Personaje;
 import edu.escuela.gamepz.personajes.buenos.Planta;
@@ -13,7 +15,13 @@ public class PruebaColeccion {
         System.out.println(f.getAbsolutePath());
     }
     private static void guardarObjetos(File f, TreeSet<Personaje> arbol){
-        for (Personaje tmp : arbol){
+        try {
+            FileInputStream fis = new FileInputStream("fis.ser");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            arbol = (TreeSet<Personaje>) ois.readObject();
+            ois.close();
+        } catch (Exception e) {
+            System.out.println("vales madres error: " + e);
         }
     }
         

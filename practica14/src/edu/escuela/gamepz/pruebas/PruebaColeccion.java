@@ -17,13 +17,15 @@ public class PruebaColeccion {
         System.out.println(f.getAbsolutePath());
     }
     private static void guardarObjetos(File f, TreeSet<Personaje> arbol){
-        try {
-            FileInputStream fis = new FileInputStream("fis.ser");
-            ObjectInputStream ois = new ObjectInputStream(fis);
-            arbol = (TreeSet<Personaje>) ois.readObject();
-            ois.close();
-        } catch (Exception e) {
-            System.out.println("Error al guardar objetos: " + e);     
+        for (Personaje tmp : arbol) {
+            try {
+                FileInputStream fis = new FileInputStream("fis.ser");
+                ObjectInputStream ois = new ObjectInputStream(fis);
+                tmp = (Personaje) ois.readObject();
+                ois.close();
+            } catch (Exception e) {
+                System.out.println("Error al guardar objetos: " + e);     
+            }
         }
     }
         

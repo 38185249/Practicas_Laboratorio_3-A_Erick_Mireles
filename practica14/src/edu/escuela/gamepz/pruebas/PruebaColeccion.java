@@ -1,5 +1,7 @@
 package edu.escuela.gamepz.pruebas;
 
+import java.io.File;
+import java.io.FileReader;
 import java.util.*;
 import edu.escuela.gamepz.personajes.Personaje;
 import edu.escuela.gamepz.personajes.buenos.Planta;
@@ -8,9 +10,17 @@ import edu.escuela.gamepz.utils.*;
 
 public class PruebaColeccion {
     public static void main(String[] args) {
-        String path = "D:/MIS DOCUMENTOS/IngSoft3B/POO/Practicas_Laboratorio_3-A_Erick_Mireles/practica14/";
+        String path = System.getProperty("user.home");
         Scanner s = new Scanner(System.in);
-        String fname = ;
+        String fname = s.nextLine();
+        File f = new File(path + fname);
+        
+        if(f.exists()){
+            System.out.println("El archivo existe");
+        }
+        if(f.isDirectory()){
+            f.mostrarDirectorio(f);
+        }
 
         Personaje[] datos = {
             new Planta("Fabian",Tablero.genVida(),Escudo.MEDIO),

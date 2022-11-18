@@ -8,6 +8,10 @@ import edu.escuela.gamepz.utils.*;
 
 public class PruebaColeccion {
     public static void main(String[] args) {
+        String path = "D:/MIS DOCUMENTOS/IngSoft3B/POO/Practicas_Laboratorio_3-A_Erick_Mireles/practica14/";
+        Scanner s = new Scanner(System.in);
+        String fname = ;
+
         Personaje[] datos = {
             new Planta("Fabian",Tablero.genVida(),Escudo.MEDIO),
             new Planta("Bianca",Tablero.genVida()),

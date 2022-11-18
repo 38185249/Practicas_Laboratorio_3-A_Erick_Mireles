@@ -13,7 +13,8 @@ public class PruebaColeccion {
         System.out.println(f.getAbsolutePath());
     }
     private static void guardarObjetos(File f, TreeSet<Personaje> arbol){
-
+        for (Personaje tmp : arbol){
+        }
     }
         
     public static void main(String[] args) {
@@ -63,9 +64,11 @@ public class PruebaColeccion {
         // Codigo de la Practica 14
         if(f.exists()){
             System.out.println("El archivo existe");
+            return;
         }
         if(f.isDirectory()){
             mostrarDirectorio(f);
+            return;
         }
         guardarObjetos(f, arbol);
     }

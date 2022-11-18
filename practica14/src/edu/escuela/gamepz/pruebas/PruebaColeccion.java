@@ -1,7 +1,6 @@
 package edu.escuela.gamepz.pruebas;
 
 import java.io.File;
-import java.io.FileReader;
 import java.util.*;
 import edu.escuela.gamepz.personajes.Personaje;
 import edu.escuela.gamepz.personajes.buenos.Planta;
@@ -13,9 +12,10 @@ public class PruebaColeccion {
     private static void mostrarDirectorio(File f) {
         System.out.println(f.getAbsolutePath());
     }
-    private static void guardarObjetos(File f, TreeSet<Personaje> arbol) {
-        
+    private static void guardarObjetos(File f, TreeSet<Personaje> arbol){
+
     }
+        
     public static void main(String[] args) {
         String path = System.getProperty("user.home");
         Scanner s = new Scanner(System.in);
@@ -60,14 +60,13 @@ public class PruebaColeccion {
         for (Personaje p : arr){
             System.out.println(p);
         }
+        // Codigo de la Practica 14
         if(f.exists()){
             System.out.println("El archivo existe");
         }
         if(f.isDirectory()){
             mostrarDirectorio(f);
-            guardarObjetos(f, arbol);
         }
-        
+        guardarObjetos(f, arbol);
     }
-
 }

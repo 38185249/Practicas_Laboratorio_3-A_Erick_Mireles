@@ -2,14 +2,13 @@ package mx.com.hilos.corredores.ventanas;
 
 import java.awt.Color;
 import java.awt.Dimension;
-
-import javax.swing.Action;
+import java.awt.event.ActionListener;
+import java.awt.FlowLayout;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-
 import mx.com.hilos.corredores.hilos.RunHilos;
 
 public class Ventana extends JFrame{
@@ -44,7 +43,7 @@ public class Ventana extends JFrame{
         btnStart.addActionListener(new ActionListener(){
             public void actionPerformed(java.awt.event.ActionEvent e){
                 setEnabled(false);
-                RunHilos.Iniciar(txtElem2, txtElem1, hElem1, hElem2);
+                RunHilos.iniciar(txtElem2, txtElem1, hElem1, hElem2);
             }
         });
         
@@ -59,5 +58,6 @@ public class Ventana extends JFrame{
         add(btnStart);
         add(hElem1);
         add(hElem2);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 }

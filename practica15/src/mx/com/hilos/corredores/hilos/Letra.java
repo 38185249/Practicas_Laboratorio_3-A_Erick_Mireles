@@ -13,7 +13,6 @@ public class Letra implements Runnable{
 
     public void run() {
         String cadena = etq.getText();
-        
         for(int i = 0; i < 51; i++){
             cadena += " "+letra;
             etq.setText(cadena);

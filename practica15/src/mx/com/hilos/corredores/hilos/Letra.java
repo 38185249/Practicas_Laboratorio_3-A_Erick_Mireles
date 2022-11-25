@@ -15,7 +15,7 @@ public class Letra implements Runnable{
         String cadena = etq.getText();
         
         for(int i = 0; i < 51; i++){
-            cadena += letra;
+            cadena += " "+letra;
             etq.setText(cadena);
             int rand = (int) (Math.random()* 1000 + 1);
             try {
@@ -23,7 +23,7 @@ public class Letra implements Runnable{
             } catch (InterruptedException e) {
                 System.out.println("Error al intentar dormir el hilo: " + e);
             }
-            cadena += "Finalizado";
+            cadena += " Finalizado";
             etq.setText(cadena);
         }
     }

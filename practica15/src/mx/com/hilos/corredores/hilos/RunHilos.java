@@ -23,5 +23,10 @@ public class RunHilos {
 
         Letra hilo1 = new Letra(elem1, ch1);
         Letra hilo2 = new Letra(elem2, ch2);
+        
+        Thread run1 = new Thread(hilo1);
+        Thread run2 = new Thread(hilo2);
+        run1.start();
+        run2.start();
     }
 }

@@ -6,8 +6,6 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import java.awt.Color;
 import java.awt.Dimension;
-
-import javax.swing.Action;
 import javax.swing.BorderFactory;
 
 public class Ventana extends JFrame{
@@ -39,20 +37,5 @@ public class Ventana extends JFrame{
         hElem2.setPreferredSize(lblDim);
         btnStart.setPreferredSize(lblDim);
 
-        btnStart.addActionListener(new RunHilos(){
-            public static void Iniciar(){
-                setTitle("Practica 15");
-                setLayout(new FlowLayout());
-                setSize(ancho,alto);
-                add(lblTitulo);
-                add(lblElem1);
-                add(txtElem1);
-                add(lblElem2);
-                add(txtElem2);
-                add(btnStart);
-                add(hElem1);
-                add(hElem2)
-            }
-        });
     }
 }

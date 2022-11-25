@@ -4,6 +4,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import java.awt.Color;
+import java.awt.Dimension;
+import javax.swing.BorderFactory;
 
 public class Ventana extends JFrame{
     JLabel lblTitulo, lblElem1, lblElem2, hElem1, hElem2;
@@ -33,5 +36,7 @@ public class Ventana extends JFrame{
         hElem2.setBorder(BorderFactory.createLineBorder(border));
         hElem2.setPreferredSize(lblDim);
         btnStart.setPreferredSize(lblDim);
+
+        btnStart.addActionListener(null);
     }
 }

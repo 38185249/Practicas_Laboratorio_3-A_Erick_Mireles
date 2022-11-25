@@ -23,6 +23,8 @@ public class Letra implements Runnable{
             } catch (InterruptedException e) {
                 System.out.println("Error al intentar dormir el hilo: " + e);
             }
+            cadena += "Finalizado";
+            etq.setText(cadena);
         }
     }
 }

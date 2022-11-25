@@ -1,19 +1,21 @@
 package mx.com.hilos.corredores.ventanas;
 
+import java.awt.Color;
+import java.awt.Dimension;
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import java.awt.Color;
-import java.awt.Dimension;
-import javax.swing.BorderFactory;
+
+import mx.com.hilos.corredores.hilos.RunHilos;
 
 public class Ventana extends JFrame{
     JLabel lblTitulo, lblElem1, lblElem2, hElem1, hElem2;
     JTextField txtElem1, txtElem2;
     JButton btnStart;
 
-    private Ventana(){
+    public Ventana(){
         initComponents();
     }
 
@@ -37,5 +39,18 @@ public class Ventana extends JFrame{
         hElem2.setPreferredSize(lblDim);
         btnStart.setPreferredSize(lblDim);
 
+        btnStart.addActionListener();
+        
+        setTitle("Practica 15");
+        setLayout(new FlowLayout());
+        setSize(ancho,alto);
+        add(lblTitulo);
+        add(lblElem1);
+        add(txtElem1);
+        add(lblElem2);
+        add(txtElem2);
+        add(btnStart);
+        add(hElem1);
+        add(hElem2);
     }
 }

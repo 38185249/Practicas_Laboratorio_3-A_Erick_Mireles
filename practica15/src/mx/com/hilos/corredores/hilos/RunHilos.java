@@ -20,5 +20,8 @@ public class RunHilos {
 
         elem1.setText(salida1);
         elem2.setText(salida2);
+
+        Letra hilo1 = new Letra(elem1, ch1);
+        Letra hilo2 = new Letra(elem2, ch2);
     }
 }

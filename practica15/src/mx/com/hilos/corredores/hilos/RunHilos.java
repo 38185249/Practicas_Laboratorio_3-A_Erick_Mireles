@@ -5,19 +5,16 @@ import javax.swing.JTextField;
 
 public class RunHilos {
     public static void iniciar(JTextField txt1, JTextField txt2, JLabel elem1, JLabel elem2){
-        char ch1 = txt1.getText().charAt(0);
-        char ch2 = txt2.getText().charAt(0);
-
-        if(txt1.getText().length() > 0 && txt1.getText().charAt(0) == ' '){
-            txt1.setText("E");
-        }else{
+        char ch1;
+        char ch2;
+        if(txt1.getText().length() == 0 || txt1.getText().charAt(0) == ' '){
             txt1.setText("E");
         }
-        if(txt2.getText().length() > 0 && txt2.getText().charAt(0) == ' '){
-            txt2.setText("M");
-        }else{
+        if(txt2.getText().length() == 0 || txt2.getText().charAt(0) == ' '){
             txt2.setText("M");
         }
+        ch1 = txt1.getText().charAt(0);
+        ch2 = txt2.getText().charAt(0);
 
         String salida1 = String.valueOf(ch1);
         String salida2 = String.valueOf(ch2);

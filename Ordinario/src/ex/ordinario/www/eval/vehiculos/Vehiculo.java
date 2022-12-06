@@ -1,3 +1,4 @@
+package ex.ordinario.www.eval.vehiculos;
 public class Vehiculo {
 	private String marca;
 	private int modelo;

@@ -1,5 +1,5 @@
 package ex.ordinario.www.eval.vehiculos;
-public class Vehiculo {
+public class Vehiculo implements Comparable<Vehiculo>{
 	private String marca;
 	private int modelo;
 	private float costo;

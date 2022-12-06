@@ -1,4 +1,17 @@
-public class Ventana{
+package ex.ordinario.www.eval.ventanas;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import java.awt.FlowLayout;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+
+public class Ventana extends JFrame{
 
 	public Ventana(){
 		initComponents();

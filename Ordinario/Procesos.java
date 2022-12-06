@@ -1,12 +1,10 @@
 import java.util.ArrayList;
-
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-
 import ex.ordinario.www.eval.vehiculos.Vehiculo;
 
 public class Procesos{
-	ArrayList lista = new ArrayList<Vehiculo>();
+	ArrayList<Vehiculo> lista = new ArrayList<Vehiculo>();
 	
 	private Procesos(){
 
@@ -22,16 +20,25 @@ public class Procesos{
 	public void addTerrestre(JTextArea txContenido, JTextField marca, JTextField modelo,
 		JTextField costo, JTextField llantas){
 			String m = marca.getText();
-			String t = modelo.getText();
+			String mo = modelo.getText();
 			String c = costo.getText();
-			llantas.getText();
-			if(modelo.){
-				llenaTxArea(txContenido);
+			String ll = llantas.getText();
+			try {
+				if(mo.length()==(int)mo.length() && Float.parseFloat(c)==(float)Float.parseFloat(c)
+					&& ll.length()==(int)ll.length()){
+					llenaTxArea(txContenido);
+				}
+			} catch (Exception e) {
+				System.out.println("Error: " + e);
 			}
 	}
 
 	public void addAcuatico(JTextArea txContenido, JTextField marca, JTextField modelo,
 		JTextField costo, JTextField remos){
+			String m = marca.getText();
+			String mo = modelo.getText();
+			String c = costo.getText();
+			String r = remos.getText();
 	}
 
 

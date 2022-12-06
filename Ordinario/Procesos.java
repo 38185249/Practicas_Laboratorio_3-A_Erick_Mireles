@@ -1,12 +1,33 @@
+import java.util.ArrayList;
+
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+import ex.ordinario.www.eval.vehiculos.Vehiculo;
+
 public class Procesos{
-	ArrayList lista
-	private Procesos(){}
+	ArrayList lista = new ArrayList<Vehiculo>();
+	
+	private Procesos(){
+
+	}
 
 	private void llenaTxArea(JTextArea txContenido){
+		txContenido.setText("");
+		for (var vehiculos: lista) {
+			txContenido.append(vehiculos.toString() + "\n");
+		}
 	}
 
 	public void addTerrestre(JTextArea txContenido, JTextField marca, JTextField modelo,
 		JTextField costo, JTextField llantas){
+			String m = marca.getText();
+			String t = modelo.getText();
+			String c = costo.getText();
+			llantas.getText();
+			if(modelo.){
+				llenaTxArea(txContenido);
+			}
 	}
 
 	public void addAcuatico(JTextArea txContenido, JTextField marca, JTextField modelo,

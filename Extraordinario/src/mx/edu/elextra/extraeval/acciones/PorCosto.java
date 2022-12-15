@@ -10,5 +10,4 @@ public class PorCosto implements Comparator<Dispositivo>{
         }
         return o1.getMarca().compareTo(o2.getMarca());
     }
-
 }

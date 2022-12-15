@@ -1,13 +1,26 @@
+package mx.edu.elextra.extraeval.acciones;
+
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import mx.edu.elextra.extraeval.dispositivos.Dispositivo;
+
 public class Procesos{
 	// ArrayList que almacena Dispositivos
+	ArrayList<Dispositivo> lista = new ArrayList<Dispositivo>();
 	private int idx = 0; //indice para moverse en el ArrayList
 	
 	private Procesos(){}
 
 	public void getPrev(JTextField JTextField JTextField JLabel){
 		// Si el tamaño de la lista es 0 llamar a JOptionPane siguiente y terminar el método
-		JOptionPane.showMessageDialog(null, "Lista vacia");
+		if(lista.size() == 0){
+			JOptionPane.showMessageDialog(null, "Lista vacia");
+		}
 		// restar a idx 1; en caso de ser 0 no realizar la resta
+		if(this.idx != 0 && this.idx > 0){
+			this.idx -= 1;
+		}
 		// establecer la etiqueta del indice en el valor que corresponda; ejemplo 1/20
 		llenarCampos(marca, costo, ramP);
 	}

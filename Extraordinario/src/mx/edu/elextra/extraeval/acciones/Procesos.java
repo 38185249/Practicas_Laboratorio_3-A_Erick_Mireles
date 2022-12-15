@@ -49,14 +49,6 @@ public class Procesos{
 	private void llenarCampos(JTextField demarca, JTextField decosto, JTextField deram, JTextField deproc){
 		// Obtener el elemento de la lista en la posición del indice
 		Dispositivo dispositivo = lista.get(idx);
-		// dispositivo.getMarca();
-		// dispositivo.getCosto();
-		// if(dispositivo == (Computadora) dispositivo){
-		// 	((Computadora) dispositivo).getRam();
-		// }
-		// if(dispositivo == (Celular) dispositivo){
-		// 	((Celular) dispositivo).getProcesador();
-		// }
 		// Con los valores marca costo y ram/procesador mostrar en las cajas de texto
 		demarca.setText(dispositivo.getMarca());
 		decosto.setText(String.valueOf(dispositivo.getCosto()));
@@ -66,19 +58,23 @@ public class Procesos{
 	}
 	public void sortMarca(){
 		// Si la lista está vacía, no se ordena
-		// Ordenar por Marca
-		for (Dispositivo dispositivo1 : lista) {
-			for (Dispositivo dispositivo2 : lista) {
-				sortmarca.compare(dispositivo1, dispositivo2);
+		if(lista != null){
+			// Ordenar por Marca
+			for (Dispositivo dispositivo1 : lista) {
+				for (Dispositivo dispositivo2 : lista) {
+					sortmarca.compare(dispositivo1, dispositivo2);
+				}
 			}
 		}
 	}
 	public void sortCosto(){
 		// Si la lista está vacía, no se ordena
-		// Ordenar por Marca
-		for (Dispositivo dispositivo1 : lista) {
-			for (Dispositivo dispositivo2 : lista) {
-				sortcosto.compare(dispositivo1, dispositivo2);
+		if(lista != null){
+			// Ordenar por Marca
+			for (Dispositivo dispositivo1 : lista) {
+				for (Dispositivo dispositivo2 : lista) {
+					sortcosto.compare(dispositivo1, dispositivo2);
+				}	
 			}
 		}
 	}
@@ -119,11 +115,19 @@ public class Procesos{
 		}
 		// Con los datos separados por coma:
 		// Si el primer elemento es una c, crear una Computadora y agregar a la lista
-		if(laslineas[0] == "c"){
-			Computadora computadora = new Computadora(laslineas[0], laslineas[1], laslineas[2]);
-			lista.add(computadora);
+		try {
+			if(laslineas[0] == "c"){
+				Computadora computadora = new Computadora(laslineas[0], Float.valueOf(laslineas[2]), Integer.valueOf(laslineas[3]));
+				lista.add(computadora);
+			}
+			// Si el primer elemento es una p, crear un Celular y agregar a la lista
+			if(laslineas[0] == "p"){
+				Celular celular = new Celular(laslineas[0], Float.valueOf(laslineas[2]), Float.valueOf(laslineas[3]));
+				lista.add(celular);
+			}
+		} catch (Exception e) {
+			System.out.println("Error: " + e);
 		}
-		// Si el primer elemento es una p, crear un Celular y agregar a la lista
 		// para lo anterior se debe de verificar con un try que los datos se pueden convertir a numéricos
 	}
 }

@@ -7,6 +7,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JTextField;
+import java.awt.FlowLayout;
 
 public class Ventana extends JFrame{
 	public Ventana(){
@@ -32,7 +33,9 @@ public class Ventana extends JFrame{
 	}
 	private void initComponents(){
 		// Establecer el el tipo de JFrame como un FlowLayout
+        setLayout(new FlowLayout());
 		// Establecer el cierre de la aplicación al cerrar la ventana
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// Crear la Barra de Menú mb
 		// Crear el Menú mnFile "Archivo"
 		// Crear el Menú Item miOpen "Abrir"

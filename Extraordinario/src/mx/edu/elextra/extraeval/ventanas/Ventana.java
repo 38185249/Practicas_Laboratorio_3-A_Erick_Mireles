@@ -1,4 +1,14 @@
-public class Ventana{
+package mx.edu.elextra.extraeval.ventanas;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JTextField;
+
+public class Ventana extends JFrame{
 	public Ventana(){
 		initComponents();
 		setJMenuBar(mb);
@@ -27,8 +37,8 @@ public class Ventana{
 		// Crear el Menú mnFile "Archivo"
 		// Crear el Menú Item miOpen "Abrir"
 		// Agregar al miOpen la clase anónima que manda llamar a los métodos siguientes: 
-				Procesos.openFile();
-				Procesos.getPrev(txMarca, txCosto, txRamP, lbIdx);
+				// Procesos.openFile();
+				// Procesos.getPrev(txMarca, txCosto, txRamP, lbIdx);
 		//
 		// Crear el Menú Item miOpen "Salir"
 		// Agregar al miOpen la clase anónima que manda llamar al método siguientes:
@@ -54,18 +64,18 @@ public class Ventana{
 		// Crear la etiqueta Label ordenando lbTipoOrd espacios+"Tipo de Ordenamiento"+espacios
 		
 		// Agregar al btnPrev la clase anónima que manda llamar al método siguientes:
-				Procesos.getPrev(txMarca, txCosto, txRamP, lbIdx);
+				// Procesos.getPrev(txMarca, txCosto, txRamP, lbIdx);
 
 		// Agregar al btnNext la clase anónima que manda llamar al método siguientes:
-				Procesos.getNext(txMarca, txCosto, txRamP, lbIdx);
+				// Procesos.getNext(txMarca, txCosto, txRamP, lbIdx);
 
 		// Agregar al miMarca la clase anónima que manda llamar a los métodos siguientes: 
 				lbTipoOrd.setText(espacios+"Ordenados por Marca"+espacios);
-				Procesos.sortMarca();
+				// Procesos.sortMarca();
 
 		// Agregar al miCosto la clase anónima que manda llamar a los métodos siguientes: 
 				lbTipoOrd.setText(espacios+"Ordenados por Costo"+espacios);
-				Procesos.sortCosto();
+				// Procesos.sortCosto();
 		setSize(330,350);
 	}
 	JMenuBar mb;

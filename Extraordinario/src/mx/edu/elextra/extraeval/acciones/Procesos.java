@@ -119,8 +119,9 @@ public class Procesos{
 		}
 		// Con los datos separados por coma:
 		// Si el primer elemento es una c, crear una Computadora y agregar a la lista
-		if(){
-
+		if(laslineas[0] == "c"){
+			Computadora computadora = new Computadora(laslineas[0], laslineas[1], laslineas[2]);
+			lista.add(computadora);
 		}
 		// Si el primer elemento es una p, crear un Celular y agregar a la lista
 		// para lo anterior se debe de verificar con un try que los datos se pueden convertir a numéricos

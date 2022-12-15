@@ -7,7 +7,11 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JTextField;
+
+import mx.edu.elextra.extraeval.acciones.Procesos;
+
 import java.awt.FlowLayout;
+import java.awt.event.ActionListener;
 
 public class Ventana extends JFrame{
 	public Ventana(){
@@ -37,15 +41,33 @@ public class Ventana extends JFrame{
 		// Establecer el cierre de la aplicación al cerrar la ventana
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// Crear la Barra de Menú mb
+		mb = new JMenuBar();
+		setJMenuBar(mb);
 		// Crear el Menú mnFile "Archivo"
+		mnFile = new JMenu("Archivo");
+		mb.add(mnFile);
 		// Crear el Menú Item miOpen "Abrir"
+		miOpen = new JMenuItem("Abrir");
 		// Agregar al miOpen la clase anónima que manda llamar a los métodos siguientes: 
 				// Procesos.openFile();
 				// Procesos.getPrev(txMarca, txCosto, txRamP, lbIdx);
+		miOpen.addActionListener(new ActionListener(){
+		public void actionPerformed(java.awt.event.ActionEvent e) {
+			procesos.openFile();
+			procesos.getPrev(txMarca, txCosto, txRamP, lbIdx);
+			}
+		});
+		mnFile.add(miOpen);
 		//
 		// Crear el Menú Item miOpen "Salir"
+		miSalir = new JMenuItem("Salir");
 		// Agregar al miOpen la clase anónima que manda llamar al método siguientes:
+		miSalir.addActionListener(new ActionListener(){
+			public void actionPerformed(java.awt.event.ActionEvent e) {
 				dispose();
+				}
+			});
+		mnFile.add(miSalir);
 		// Crear el menú mnSort "Ordenar por ..."
 		// Crear el Menú Item miMarca "Marca"
 		// Crear el Menú Item miCosto "Costo"
@@ -87,4 +109,5 @@ public class Ventana extends JFrame{
 	JLabel lbMarca, lbModelo, lbCosto, lbRamP, lbTipoOrd, lbIdx;
 	JTextField txMarca, txCosto, txRamP;
 	JButton btnPrev, btnNext;
+	Procesos procesos;
 }

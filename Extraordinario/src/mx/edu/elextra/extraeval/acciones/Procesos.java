@@ -99,25 +99,29 @@ public class Procesos{
         if(f.exists()){
 			// Si el archivo existe crear un BufferedReader para leer el contenido del archivo
 			BufferedReader reader = new BufferedReader(new FileReader(f));
-            if(f.isFile()){
-                System.out.println("El archivo existe");
-                return;
-            }else{
-                System.exit(0);
-            }
+			String linea;
+			linea = reader.readLine();
+			// Con cada linea del archivo llamar al método
+			agregarLinea(linea);
+			reader.close();
         }
 		// No existe se llama al siguiente JOptionPane y termina el método
 		JOptionPane.showMessageDialog(null, "El archivo no existe");
 		System.exit(0);
-		// Con cada linea del archivo llamar al método
-				agregarLinea(linea);
 	}
-	private void agregarLinea(String){
+	private void agregarLinea(String linea){
 		// Separar la linea por comas ','
+		String[] laslineas = linea.split(",");
 		// si no tiene 4 elementos mostrar el siguiente JOptionPane y terminar el método
+		if(laslineas.length != 4){
 			JOptionPane.showMessageDialog(null, "Formato incorrecto");
+			System.exit(0);
+		}
 		// Con los datos separados por coma:
 		// Si el primer elemento es una c, crear una Computadora y agregar a la lista
+		if(){
+
+		}
 		// Si el primer elemento es una p, crear un Celular y agregar a la lista
 		// para lo anterior se debe de verificar con un try que los datos se pueden convertir a numéricos
 	}

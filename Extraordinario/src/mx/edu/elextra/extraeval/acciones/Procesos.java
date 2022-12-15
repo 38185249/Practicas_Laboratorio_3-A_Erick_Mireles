@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import mx.edu.elextra.extraeval.dispositivos.Celular;
@@ -20,7 +22,7 @@ public class Procesos{
 	
 	private Procesos(){}
 
-	public void getPrev(JTextField demarca, JTextField decosto, JTextField deram, JTextField deproc){
+	public void getPrev(JTextField demarca, JTextField decosto, JTextField deram, JTextField deproc, JLabel deidx){
 		// Si el tamaño de la lista es 0 llamar a JOptionPane siguiente y terminar el método
 		if(lista.size() == 0){
 			JOptionPane.showMessageDialog(null, "Lista vacia");

@@ -54,7 +54,7 @@ public class Ventana extends JFrame{
 		miOpen.addActionListener(new ActionListener(){
 		public void actionPerformed(java.awt.event.ActionEvent e) {
 			procesos.openFile();
-			procesos.getPrev(txMarca, txCosto, txRamP, lbIdx);
+			procesos.getPrev(txMarca, txCosto, txRam, txPrc, lbIdx);
 			}
 		});
 		mnFile.add(miOpen);
@@ -69,27 +69,44 @@ public class Ventana extends JFrame{
 			});
 		mnFile.add(miSalir);
 		// Crear el menú mnSort "Ordenar por ..."
+		mnSort = new JMenu("Ordenar por ...");
 		// Crear el Menú Item miMarca "Marca"
+		miMarca = new JMenuItem("Marca");
 		// Crear el Menú Item miCosto "Costo"
-
+			miCosto = new JMenuItem("Costo");
 		// Crear la etiqueta lbMarca "Marca"
+		lbMarca = new JLabel("Marca");
 		// Crear la etiqueta lbMarca "Costo"
+		lbCosto = new JLabel("Costo");
 		// Crear la etiqueta lbRamP "Ram/Proc"
-		
+		lbRam = new JLabel("Ram");
+		lbPrc = new JLabel("Proc");
 		// Crear el campo de texto txMarca de tamaño 20
+		txMarca = new JTextField(20);
 		// Crear el campo de texto txCosto de tamaño 20
+		txCosto = new JTextField(20);
 		// Crear el campo de texto txRamP de tamaño 20
+		txRam = new JTextField(20);
+		txPrc = new JTextField(20);
 
 		// Crear el botón btnPrev " <- "
+		btnPrev = new JButton(" <- ");
 		// Crear el botón btnNext " -> "
-
+		btnNext = new JButton(" -> ");
 		// Crear la etiqueta lbIdx "0/0"
+		lbIdx = new JLabel("0/0");
 		
 		String espacios = "       ";
 		// Crear la etiqueta Label ordenando lbTipoOrd espacios+"Tipo de Ordenamiento"+espacios
+		lbTipoOrd = new JLabel(espacios+"Tipo de Ordenamiento"+espacios);
 		
 		// Agregar al btnPrev la clase anónima que manda llamar al método siguientes:
-				// Procesos.getPrev(txMarca, txCosto, txRamP, lbIdx);
+		// Procesos.getPrev(txMarca, txCosto, txRamP, lbIdx);
+		btnPrev.addActionListener(new ActionListener(){
+			public void actionPerformed(java.awt.event.ActionEvent e) {
+				procesos.getPrev(txMarca, txCosto, txRam, txPrc, lbIdx);
+				}
+			});
 
 		// Agregar al btnNext la clase anónima que manda llamar al método siguientes:
 				// Procesos.getNext(txMarca, txCosto, txRamP, lbIdx);
@@ -106,8 +123,8 @@ public class Ventana extends JFrame{
 	JMenuBar mb;
 	JMenu mnFile,mnSort;
 	JMenuItem miOpen, miSalir, miMarca, miCosto;
-	JLabel lbMarca, lbModelo, lbCosto, lbRamP, lbTipoOrd, lbIdx;
-	JTextField txMarca, txCosto, txRamP;
+	JLabel lbMarca, lbModelo, lbCosto, lbRam, lbPrc, lbTipoOrd, lbIdx;
+	JTextField txMarca, txCosto, txRam, txPrc;
 	JButton btnPrev, btnNext;
 	Procesos procesos;
 }

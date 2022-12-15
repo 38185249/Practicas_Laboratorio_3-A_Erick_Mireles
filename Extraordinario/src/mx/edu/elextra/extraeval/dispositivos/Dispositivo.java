@@ -1,3 +1,5 @@
+package mx.edu.elextra.extraeval.dispositivos;
+
 public class Dispositivo implements Comparable<Dispositivo>{
 	private String marca;
 	private float costo;

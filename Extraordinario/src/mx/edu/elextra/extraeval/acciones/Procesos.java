@@ -1,6 +1,8 @@
 package mx.edu.elextra.extraeval.acciones;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
@@ -95,6 +97,8 @@ public class Procesos{
 
 		// Verificar si el archivo existe
         if(f.exists()){
+			// Si el archivo existe crear un BufferedReader para leer el contenido del archivo
+			BufferedReader reader = new BufferedReader(new FileReader(f));
             if(f.isFile()){
                 System.out.println("El archivo existe");
                 return;
@@ -103,8 +107,8 @@ public class Procesos{
             }
         }
 		// No existe se llama al siguiente JOptionPane y termina el método
-			JOptionPane.showMessageDialog(null, "El archivo no existe");
-		// Si el archivo existe crear un BufferedReader para leer el contenido del archivo
+		JOptionPane.showMessageDialog(null, "El archivo no existe");
+		System.exit(0);
 		// Con cada linea del archivo llamar al método
 				agregarLinea(linea);
 	}

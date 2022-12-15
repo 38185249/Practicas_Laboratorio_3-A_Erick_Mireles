@@ -7,9 +7,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JTextField;
-
 import mx.edu.elextra.extraeval.acciones.Procesos;
-
 import java.awt.FlowLayout;
 import java.awt.event.ActionListener;
 
@@ -28,8 +26,10 @@ public class Ventana extends JFrame{
 		add(txMarca);
 		add(lbCosto);
 		add(txCosto);
-		add(lbRamP);
-		add(txRamP);
+		add(lbRam);
+		add(lbPrc);
+		add(txRam);
+		add(txPrc);
 		add(btnPrev);
 		add(lbIdx);
 		add(btnNext);
@@ -42,10 +42,8 @@ public class Ventana extends JFrame{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// Crear la Barra de Menú mb
 		mb = new JMenuBar();
-		setJMenuBar(mb);
 		// Crear el Menú mnFile "Archivo"
 		mnFile = new JMenu("Archivo");
-		mb.add(mnFile);
 		// Crear el Menú Item miOpen "Abrir"
 		miOpen = new JMenuItem("Abrir");
 		// Agregar al miOpen la clase anónima que manda llamar a los métodos siguientes: 
@@ -57,7 +55,6 @@ public class Ventana extends JFrame{
 			procesos.getPrev(txMarca, txCosto, txRam, txPrc, lbIdx);
 			}
 		});
-		mnFile.add(miOpen);
 		//
 		// Crear el Menú Item miOpen "Salir"
 		miSalir = new JMenuItem("Salir");
@@ -67,7 +64,6 @@ public class Ventana extends JFrame{
 				dispose();
 				}
 			});
-		mnFile.add(miSalir);
 		// Crear el menú mnSort "Ordenar por ..."
 		mnSort = new JMenu("Ordenar por ...");
 		// Crear el Menú Item miMarca "Marca"
@@ -101,7 +97,7 @@ public class Ventana extends JFrame{
 		lbTipoOrd = new JLabel(espacios+"Tipo de Ordenamiento"+espacios);
 		
 		// Agregar al btnPrev la clase anónima que manda llamar al método siguientes:
-		// Procesos.getPrev(txMarca, txCosto, txRamP, lbIdx);
+			// Procesos.getPrev(txMarca, txCosto, txRamP, lbIdx);
 		btnPrev.addActionListener(new ActionListener(){
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				procesos.getPrev(txMarca, txCosto, txRam, txPrc, lbIdx);
@@ -110,14 +106,27 @@ public class Ventana extends JFrame{
 
 		// Agregar al btnNext la clase anónima que manda llamar al método siguientes:
 				// Procesos.getNext(txMarca, txCosto, txRamP, lbIdx);
+		btnNext.addActionListener(new ActionListener(){
+			public void actionPerformed(java.awt.event.ActionEvent e) {
+				procesos.getNext(txMarca, txCosto, txRam, txPrc, lbIdx);
+				}
+			});
 
 		// Agregar al miMarca la clase anónima que manda llamar a los métodos siguientes: 
+		miMarca.addActionListener(new ActionListener(){
+			public void actionPerformed(java.awt.event.ActionEvent e) {
 				lbTipoOrd.setText(espacios+"Ordenados por Marca"+espacios);
-				// Procesos.sortMarca();
+				procesos.sortMarca();
+				}
+			});
 
 		// Agregar al miCosto la clase anónima que manda llamar a los métodos siguientes: 
+		miCosto.addActionListener(new ActionListener(){
+			public void actionPerformed(java.awt.event.ActionEvent e) {
 				lbTipoOrd.setText(espacios+"Ordenados por Costo"+espacios);
-				// Procesos.sortCosto();
+				procesos.sortCosto();
+			}
+		});
 		setSize(330,350);
 	}
 	JMenuBar mb;

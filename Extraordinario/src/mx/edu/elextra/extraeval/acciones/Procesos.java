@@ -35,7 +35,7 @@ public class Procesos{
 		// establecer la etiqueta del indice en el valor que corresponda; ejemplo 1/20
 		llenarCampos(demarca, decosto, deram, deproc);
 	}
-	public void getNext(JTextField demarca, JTextField decosto, JTextField deram, JTextField deproc){
+	public void getNext(JTextField demarca, JTextField decosto, JTextField deram, JTextField deproc, JLabel deidx){
 		// Si el tamaño de la lista es 0 llamar a JOptionPane siguiente y terminar el método
 		if(lista.size() == 0){
 			JOptionPane.showMessageDialog(null, "Lista vacia");
@@ -96,12 +96,16 @@ public class Procesos{
 		// Verificar si el archivo existe
         if(f.exists()){
 			// Si el archivo existe crear un BufferedReader para leer el contenido del archivo
-			BufferedReader reader = new BufferedReader(new FileReader(f));
-			String linea;
-			linea = reader.readLine();
-			// Con cada linea del archivo llamar al método
-			agregarLinea(linea);
-			reader.close();
+			try {
+				BufferedReader reader = new BufferedReader(new FileReader(f));
+				String linea;
+				linea = reader.readLine();
+				// Con cada linea del archivo llamar al método
+				agregarLinea(linea);
+				reader.close();
+			} catch (Exception e) {
+				System.out.println("Error: " + e);
+			}
         }
 		// No existe se llama al siguiente JOptionPane y termina el método
 		JOptionPane.showMessageDialog(null, "El archivo no existe");
